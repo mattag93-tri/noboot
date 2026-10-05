@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOBOOT — Know before you get booted</title>
+<meta name="description" content="Check your plate for NYC parking and camera violations, judgment debt, and vehicle-level boot exposure.">
+<style>
+:root{--bg:#080808;--panel:#111;--line:#292929;--muted:#8a8a8a;--orange:#ff641e;--white:#f6f6f6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif}.shell{width:min(1120px,calc(100% - 32px));margin:auto}.nav{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 max(16px,calc((100vw - 1120px)/2));border-bottom:1px solid #242424;position:sticky;top:0;background:rgba(8,8,8,.95);backdrop-filter:blur(10px);z-index:10}.brand{font-size:26px;font-weight:950;letter-spacing:-1.5px;color:#fff;text-decoration:none}.brand span,.hero h1 span{color:var(--orange)}.pill{font-size:10px;font-weight:900;letter-spacing:1px;border:1px solid #353535;padding:8px 10px;border-radius:999px;color:#aaa}.hero{padding:82px 0 54px}.eyebrow{font-size:11px;font-weight:900;letter-spacing:1.6px;color:#ff7b39}.hero h1{font-size:clamp(62px,10vw,116px);line-height:.82;letter-spacing:-6px;margin:18px 0 30px;max-width:900px}.lead{font-size:20px;line-height:1.55;color:#b9b9b9;max-width:760px}.scanner{margin-top:34px;display:grid;grid-template-columns:1fr 125px auto;gap:12px;background:var(--panel);border:1px solid var(--line);padding:14px;border-radius:16px}.field{display:flex;flex-direction:column;gap:7px}.field label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#777;font-weight:900}.field input,.field select{height:54px;border:1px solid #353535;background:#0b0b0b;color:#fff;border-radius:10px;padding:0 15px;font-size:18px;outline:none}.field input:focus,.field select:focus{border-color:#666}.btn{border:0;border-radius:10px;padding:0 22px;font-weight:900;cursor:pointer;min-height:54px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.btn-primary{background:var(--orange);color:#0b0b0b}.btn-dark{background:#161616;color:#fff;border:1px solid #343434}.status{min-height:24px;margin:12px 3px;color:#999;font-size:13px}.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #222;border-bottom:1px solid #222;margin-top:45px}.stats div{padding:25px 16px;border-right:1px solid #222}.stats div:last-child{border:0}.stats strong{display:block;font-size:26px}.stats span{font-size:12px;color:#777}.results{padding:70px 0;display:none}.resultHead{display:flex;justify-content:space-between;gap:25px;align-items:center}.resultHead h2{font-size:44px;margin:8px 0}.risk{min-width:270px;text-align:right;padding:18px;border:1px solid #333;border-radius:12px;background:#101010}.risk small,.risk span{display:block;color:#777;font-size:11px}.risk strong{display:block;margin:5px 0;font-size:16px}.risk-critical{border-color:#b64029}.risk-high{border-color:#8a5526}.risk-watch{border-color:#73631f}.risk-low{border-color:#2b6e45}.resultGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#292929;border:1px solid #292929;margin-top:26px}.resultGrid div{background:#101010;padding:24px}.resultGrid span{display:block;color:#777;font-size:11px;text-transform:uppercase;font-weight:900}.resultGrid strong{display:block;font-size:27px;margin-top:7px}.warning{display:none;margin-top:16px;background:#25120f;border:1px solid #7b321f;padding:18px;border-radius:10px;color:#f3c1b3}.actions{display:flex;gap:10px;margin-top:20px}.tickets{margin-top:38px}.tickets article{display:flex;justify-content:space-between;gap:25px;padding:18px 0;border-top:1px solid #262626}.tickets article>div:last-child{text-align:right}.tickets article span{display:block;color:#777;font-size:12px;margin-top:6px}.disclaimer{color:#777;font-size:12px;line-height:1.55;border-top:1px solid #252525;padding-top:18px}.guard{background:#111;border-top:1px solid #292929;border-bottom:1px solid #292929;padding:75px 0}.guardGrid{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center}.guard h2{font-size:48px;letter-spacing:-2px;margin:12px 0}.guard p,.guard li{color:#969696;line-height:1.55}.priceCard{background:#090909;border:1px solid #333;border-radius:16px;padding:28px}.price{font-size:64px;font-weight:950;letter-spacing:-4px}.price>span{font-size:30px;vertical-align:top}.price small{font-size:15px;color:#777;letter-spacing:0}.priceCard .btn{width:100%;margin-top:16px}.testnote{margin-top:10px;color:#777;font-size:12px;line-height:1.45}footer{width:min(1120px,calc(100% - 32px));margin:auto;padding:35px 0 60px;color:#666;font-size:11px;line-height:1.55}@media(max-width:800px){.hero{padding-top:55px}.hero h1{letter-spacing:-4px}.scanner{grid-template-columns:1fr 100px}.scanner .btn{grid-column:1/-1}.stats{grid-template-columns:1fr}.stats div{border-right:0;border-bottom:1px solid #222}.resultHead{align-items:stretch;flex-direction:column}.risk{text-align:left;min-width:0}.resultGrid{grid-template-columns:1fr 1fr}.guardGrid{grid-template-columns:1fr}.guard h2{font-size:38px}}@media(max-width:480px){.resultGrid{grid-template-columns:1fr}.actions{flex-direction:column}.hero h1{font-size:60px}.lead{font-size:17px}}
+</style>
+</head>
+<body>
+<header class="nav"><a class="brand" href="#top">NO<span>BOOT</span></a><div class="pill">PUBLIC TEST</div></header>
+<main id="top">
+<section class="hero shell">
+<div class="eyebrow">NYC PUBLIC DATA • ALL 50 STATE PLATES</div>
+<h1>DON'T GET<br><span>BOOTED.</span></h1>
+<p class="lead">Check your plate for open NYC parking and camera violations, outstanding balances, judgment debt and vehicle-level enforcement risk.</p>
+<form id="scanner" class="scanner">
+<div class="field"><label for="plate">License plate</label><input id="plate" placeholder="ABC1234" autocomplete="off" required></div>
+<div class="field"><label for="state">State</label><select id="state"></select></div>
+<button class="btn btn-primary" type="submit">CHECK MY PLATE FREE →</button>
+</form>
+<div id="status" class="status">Free scan. No account required.</div>
+<div class="stats"><div><strong>$350+</strong><span>Judgment-debt warning level</span></div><div><strong>50</strong><span>Plate states supported</span></div><div><strong>FREE</strong><span>Initial plate scan</span></div></div>
+</section>
+
+<section id="results" class="results shell">
+<div class="resultHead"><div><div class="eyebrow">NOBOOT SCAN RESULT</div><h2 id="plateTitle"></h2></div><div id="risk" class="risk"><small>VEHICLE RISK</small><strong id="riskLabel"></strong><span id="riskScore"></span></div></div>
+<div class="resultGrid"><div><span>Open violations</span><strong id="openCount"></strong></div><div><span>Outstanding</span><strong id="totalDue"></strong></div><div><span>Judgment debt</span><strong id="judgmentDue"></strong></div><div><span>Scanned</span><strong id="scannedAt"></strong></div></div>
+<div id="warning" class="warning"><strong>Potential NYC judgment-debt boot exposure detected.</strong> This is a plate-level estimate, not an official owner-level enforcement determination.</div>
+<div class="actions"><a class="btn btn-primary" href="#guard">PROTECT THIS PLATE →</a></div>
+<div id="tickets" class="tickets"></div>
+<p class="disclaimer">NYC may consider combined judgment debt across vehicles registered to the same owner. NOBOOT only sees public records associated with the plate/state entered and cannot establish complete owner-level boot eligibility.</p>
+</section>
+
+<section id="guard" class="guard"><div class="shell guardGrid"><div><div class="eyebrow">NOBOOT GUARD</div><h2>Stop checking manually.</h2><p>NOBOOT automatically rescans a protected vehicle and alerts the subscriber when tracked public data changes.</p><ul><li>Daily automatic rescans</li><li>New-ticket alerts</li><li>Judgment-debt warnings</li><li>Risk-change alerts</li></ul></div><div class="priceCard"><div class="price"><span>$</span>59<small>/year</small></div><p>One monitored vehicle.</p><a class="btn btn-primary" href="https://buy.stripe.com/test_14AaEW1vw0A72VNbMp7N600">START NOBOOT GUARD →</a><div class="testnote">Stripe test mode. No real charge is processed. Checkout collects your plate and two-letter state.</div></div></div></section>
+</main>
+<footer>NOBOOT is an independent informational service and is not affiliated with or endorsed by the City of New York or any government agency. Public records can be delayed or incomplete. Always verify official balances and enforcement status directly with NYC Department of Finance.</footer>
+<script>
+const states=['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'];
+const select=document.getElementById('state');
+select.innerHTML=states.map(s=>'<option'+(s==='NY'?' selected':'')+'>'+s+'</option>').join('');
+const money=v=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(Number(v||0));
+const date=v=>v?new Date(v).toLocaleDateString('en-US'):'—';
+const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+document.getElementById('plate').addEventListener('input',e=>e.target.value=e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,''));
+document.getElementById('scanner').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const status=document.getElementById('status');
+  const btn=e.currentTarget.querySelector('button');
+  const plate=document.getElementById('plate').value.trim();
+  const state=select.value;
+  if(plate.length<2){status.textContent='Enter a valid license plate.';return;}
+  btn.disabled=true;btn.textContent='CHECKING…';status.textContent='Checking NYC public violation data…';
+  try{
+    const r=await fetch('https://iofgsaemuhqdnxermegd.supabase.co/functions/v1/plate-scan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({plate,state})});
+    const d=await r.json();
+    if(!r.ok)throw new Error(d.error||'Scan failed.');
+    document.getElementById('plateTitle').textContent=d.state+' '+d.plate;
+    document.getElementById('riskLabel').textContent=d.label;
+    document.getElementById('riskScore').textContent=d.score+'/100';
+    const risk=document.getElementById('risk');risk.className='risk risk-'+d.level;
+    document.getElementById('openCount').textContent=d.openCount;
+    document.getElementById('totalDue').textContent=money(d.totalDue);
+    document.getElementById('judgmentDue').textContent=money(d.judgmentDue);
+    document.getElementById('scannedAt').textContent=date(d.scannedAt);
+    document.getElementById('warning').style.display=d.judgmentDue>=350?'block':'none';
+    document.getElementById('tickets').innerHTML='<h3>Outstanding violations</h3>'+(d.violations.length?d.violations.map(v=>'<article><div><b>'+escapeHtml(v.violation||'Violation')+'</b><span>'+date(v.issueDate)+' • '+escapeHtml(v.summonsNumber||'No summons number')+'</span></div><div><strong>'+money(v.amountDue)+'</strong><span>'+(v.inJudgment?'Judgment':'Open')+'</span></div></article>').join(''):'<p style="color:#777">No outstanding records returned by the NYC dataset for this plate/state.</p>');
+    document.getElementById('results').style.display='block';status.textContent='Scan complete.';
+    setTimeout(()=>document.getElementById('results').scrollIntoView({behavior:'smooth'}),50);
+  }catch(err){status.textContent=err.message||'Could not complete scan.';}
+  finally{btn.disabled=false;btn.textContent='CHECK MY PLATE FREE →';}
+});
+</script>
+</body>
+</html>
